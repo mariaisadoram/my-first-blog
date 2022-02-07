@@ -8,4 +8,4 @@ def post_list(request):
     #shows actual publications sorted by publication date
     #'post' is a variable to QuerySet
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date') 
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    return render(request, 'templates/blog/post_list.html', {'posts': posts})
